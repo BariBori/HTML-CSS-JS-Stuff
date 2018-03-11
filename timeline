@@ -1,0 +1,68 @@
+	<div id="history">
+		<div  class="container-fluid content" >
+			<h1 class="header1">Cégtörténet</h1>
+			<hr>
+			 <ul class="timeline">
+        <li>
+          <div class="timeline-badge asso "><span class="timeline-badge-text">2000</span></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">2000</h4>
+            </div>
+            <div class="timeline-body">
+              <p>A társaság 2000. novemberében alakult magyarországi magánszemélyek 100%-os tulajdonában. Tevékenységi köre elsősorban IBM AS/400, iSeries 400, i5 rendszerek értékesítéséből, értékesítési tanácsadásból és e rendszerekhez kapcsolódó szolgáltatásokból áll.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge asso"><span class="timeline-badge-text">2004</span></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Rising Star</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Első helyezés a Deloitte & Touche Közép-Európa ötven leggyorsabban fejlődő technológiai cégét rangsoroló listájának Rising Star kategóriájában.</p>
+              
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge asso"><span class="timeline-badge-text">2005</span></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Rising Star</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Ismételt első helyezés a Deloitte & Touche Közép-Európa ötven leggyorsabban fejlődő technológiai cégét rangsoroló listájának Rising Star kategóriájában.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+		<div class="timeline-badge asso"><span class="timeline-badge-text">2007</span></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Technology Fast 50</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Hatodik helyezés Deloitte & Touche közép-európai Technology Fast 50 programjában. A résztvevők kiválasztása a 2002-2006-os időszakra jellemző százalékos árbevétel-növekedés alapján történt.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge asso"><span class="timeline-badge-text">2018</span></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+         
+              
+            </div>
+          </div>
+        </li>
+        
+    </ul>
+		</div> <!--END CONTAINER-->
+	
+	</div> <!--END HISTORY-->
