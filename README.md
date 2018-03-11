@@ -1,4 +1,4 @@
-# HTML-Stuff
+# HTML-CSS-JS-Stuff
 HTML kódrészletek
 
 Hi!
