@@ -1,0 +1,199 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="counter HTML">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<!--BOOTSTRAP -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	
+	<!--JQUERY-->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    		
+	<!--FONTAWESOME-->	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+		
+	<!--GOOGLE FONT-->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">  
+	
+	<!--CSS-->
+	  <style>
+		.icon{
+			font-size:3em; 
+			color:#666;
+			text-align: center;
+		}
+		
+		.center{
+			text-align: center;
+		}
+		
+		.header {
+			font-family: 'Raleway', sans-serif;
+			font-size: 25px;
+			display: inline-block;
+			font-weight: 400;
+		}
+		
+		.counter {
+			font-family: 'Raleway', sans-serif;
+			font-size: 30px;
+			color:#FF2E30;
+			margin-bottom: 20px;
+			display: inline-block;
+			font-weight: 400;
+		}
+		
+		.currency{
+			font-family: 'Raleway', sans-serif;
+			font-size: 30px;
+			color: #FF2E30;
+			margin-bottom: 20px;
+			display: inline-block;
+			font-weight: 400;
+		}
+	  
+	  </style>
+	
+	<!--COUNTER-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    
+	<script>
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 3000
+            });
+        });
+    </script>
+    
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col col-sm4 icon">
+				<i class="fas fa-users"></i>
+			</div>
+			<div class="col col-sm4 icon">
+				<i class="fas fa-newspaper"></i>
+			</div>
+			<div class="col col-sm4 icon">
+				<i class="fas fa-money-bill-alt"></i>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col col-sm4 center">
+				<span class="counter">99</span>
+			</div>
+			<div class="col col-sm4 center">
+				<span class="counter">123</span>
+			</div>
+			<div class="col col-sm4 center">
+				<span class="counter">567,450,123</span>
+				<span class="currency">Ft</span>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col col-sm4 center">
+				<span class="header">Ügyfél</span>
+			</div>
+			<div class="col col-sm4 center">
+				<span class="header">Projekt</span>
+			</div>
+			<div class="col col-sm4 center">
+				<span class="header">Támogatási összeg</span>
+			</div>
+		</div>
+	</div>
+
+<!--COUNTER UP SCRIPT-->
+	<script>
+		(function( $ ){
+  "use strict";
+
+  $.fn.counterUp = function( options ) {
+
+    // Defaults
+    var settings = $.extend({
+        'time': 400,
+        'delay': 10
+    }, options);
+
+    return this.each(function(){
+
+        // Store the object
+        var $this = $(this);
+        var $settings = settings;
+
+        var counterUpper = function() {
+            var nums = [];
+            var divisions = $settings.time / $settings.delay;
+            var num = $this.text();
+            var isComma = /[0-9]+,[0-9]+/.test(num);
+            num = num.replace(/,/g, '');
+            var isInt = /^[0-9]+$/.test(num);
+            var isFloat = /^[0-9]+\.[0-9]+$/.test(num);
+            var decimalPlaces = isFloat ? (num.split('.')[1] || []).length : 0;
+
+            // Generate list of incremental numbers to display
+            for (var i = divisions; i >= 1; i--) {
+
+                // Preserve as int if input was int
+                var newNum = parseInt(num / divisions * i);
+
+                // Preserve float if input was float
+                if (isFloat) {
+                    newNum = parseFloat(num / divisions * i).toFixed(decimalPlaces);
+                }
+
+                // Preserve commas if input had commas
+                if (isComma) {
+                    while (/(\d+)(\d{3})/.test(newNum.toString())) {
+                        newNum = newNum.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+                    }
+                }
+
+                nums.unshift(newNum);
+            }
+
+            $this.data('counterup-nums', nums);
+            $this.text('0');
+
+            // Updates the number until we're done
+            var f = function() {
+                $this.text($this.data('counterup-nums').shift());
+                if ($this.data('counterup-nums').length) {
+                    setTimeout($this.data('counterup-func'), $settings.delay);
+                } else {
+                    delete $this.data('counterup-nums');
+                    $this.data('counterup-nums', null);
+                    $this.data('counterup-func', null);
+                }
+            };
+            $this.data('counterup-func', f);
+
+            // Start the count up
+            setTimeout($this.data('counterup-func'), $settings.delay);
+        };
+
+        // Perform counts when the element gets into view
+        $this.waypoint(counterUpper, { offset: '100%', triggerOnce: true });
+    });
+
+  };
+
+})( jQuery );
+	
+	
+	</script>
+</body>
+
+</html>
